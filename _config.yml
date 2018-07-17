@@ -7,8 +7,8 @@ menu:
 # SubNav
 subnav:
   github: "#"
-  weibo: "#"
-  rss: "#"
+  #weibo: "#"
+  #rss: "#"
   zhihu: "#"
   #qq: "#"
   #weixin: "#"
