@@ -6,6 +6,12 @@
         <% if (!post.noDate){ %>
         <%- partial('post/date', {class_name: 'archive-article-date', date_format: null}) %>
         <% } %>
+
+        <% if (!index) { %>
+          <span id="busuanzi_container_page_pv" class='archive-article-date'>
+            阅读量<span id="busuanzi_value_page_pv"></span>
+          </span>
+        <% } %>
       </header>
     <% } %>
     <div class="article-entry" itemprop="articleBody">
@@ -59,9 +65,6 @@
         </div>
       <% } %>
       <%- partial('post/tag') %>
-      <span id="busuanzi_container_page_pv">
-        |阅读量(<span id="busuanzi_value_page_pv"></span>)
-      </span>
       <%- partial('post/category') %>
       <% if (index && theme.show_all_link){ %>
         <p class="article-more-link">
