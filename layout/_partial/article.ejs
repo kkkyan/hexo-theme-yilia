@@ -7,9 +7,15 @@
         <%- partial('post/date', {class_name: 'archive-article-date', date_format: null}) %>
         <% } %>
 
-        <% if (!index) { %>
-          <span id="busuanzi_container_page_pv" class='archive-article-date'>
-            阅读量<span id="busuanzi_value_page_pv"></span>
+        <% if (theme.leancloud_visitors.enable){ %>
+          <a href="javascript:;" class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数:<span id="<%- url_for(post.path) %>" class="pageViews">0</span>次
+          </a>
+        <% } %>
+        <% if (theme.wordcount){ %>
+          <span  class='archive-article-date'>
+            <i></i>共计: <%- wordcount(post.content) %>字 |
+            阅读时间≈<%- min2read(post.content) %> 分钟
           </span>
         <% } %>
       </header>

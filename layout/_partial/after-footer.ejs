@@ -16,6 +16,10 @@
 
 <%- partial('script') %>
 
+<% if (theme.leancloud_visitors.enable){ %>
+<%- partial('post/leancloud') %> 
+<% } %>
+
 <% if (theme.mathjax){ %>
 <%- partial('mathjax') %>
 <% } %>
