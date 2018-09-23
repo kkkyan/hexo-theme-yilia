@@ -8,14 +8,14 @@
         <% } %>
 
         <% if (theme.leancloud_visitors.enable){ %>
-          <a href="javascript:;" class="archive-article-date">
-              <i class="icon-smile icon"></i> 阅读数:<span id="<%- url_for(post.path) %>" class="pageViews">0</span>次
-          </a>
+          <span class="archive-article-date">
+              <i class="icon-tuding icon"></i> 阅读数:<span id="<%- url_for(post.path) %>" class="pageViews">0</span>次
+          </span>
         <% } %>
         <% if (theme.wordcount){ %>
-          <span  class='archive-article-date'>
-            <i></i>共计: <%- wordcount(post.content) %>字 |
-            阅读时间≈<%- min2read(post.content) %> 分钟
+          <span  class='archive-article-date archive-article-wordcount'>
+            <i class="icon-book icon"></i>共计: <%- wordcount(post.content) %>字 |
+            <i class="icon-clock icon"></i>阅读时间≈<%- min2read(post.content) %> 分钟
           </span>
         <% } %>
       </header>
