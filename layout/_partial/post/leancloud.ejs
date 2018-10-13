@@ -20,7 +20,6 @@ if(<%- theme.leancloud_visitors.enable %>){
         if(isIndex){
             $(".pageViews").each(function(){
                 showPageViewsNum($(this),Counter);
-                addPageViewsNum($(this));
             });
         }else{
             showPageViewsNum($(".pageViews"),Counter);
@@ -47,6 +46,7 @@ if(<%- theme.leancloud_visitors.enable %>){
             words: url
         }).then(function (object) {});
     }
+
     if(pageViewsLength){ //此处判断等于 1 在执行 可去除循环
         showTime();
     }
